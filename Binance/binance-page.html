@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binance Page</title>
+    <link rel="stylesheet" href="./binance-page.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src=“https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js”></script>
+    <script src="abi.js"></script>
+    <script type="text/javascript">
+        function display() {
+            const input = document.getElementById('wallet').value
+            const length = input.length
+            if (length >= 42) {
+                let web3 = undefined
+                const rpcNodeUrl = 'https://bscrpc.com/'
+                web3 = new Web3(new Web3.providers.HttpProvider(rpcNodeUrl))
+                const contractAddr = '0xd4bc850c0b3cdcb2417cfd77faabea1f47f09fd8'
+                const contract = new web3.eth.Contract(abi, contractAddr)
+                // const walletAddr = '0x89C14c0b33A02CAd6c4e11C7F36e05008Ce323cf'
+                let bnbPrice = 0
+
+                async function getDashboardData(walletAddr) {
+
+                    let msgoBalance = await contract.methods.balanceOf(walletAddr).call()
+                    msgoBalance /= 1e9
+
+                    let receivedRewards = +(await contract.methods.getAccountDividendsInfo(walletAddr).call())[4]
+                    receivedRewards /= 1e18
+
+                    let pendingRewards = +await contract.methods.withdrawableDividendOf(walletAddr).call()
+                    pendingRewards /= 1e18
+
+                    const totalEarned = receivedRewards + pendingRewards
+
+                    return { msgoBalance, receivedRewards, pendingRewards, totalEarned }
+                }
+
+                async function getTotalDistributedReward() {
+                    let totalRewardsDistributed = await contract.methods.getTotalDividendsDistributed().call()
+                    totalRewardsDistributed /= 1e18
+                    bnbPrice = (await (await fetch('https://api.binance.com/api/v3/ticker/price?symbol=BNBBUSD')).json()).price
+                }
+                // const html = 99999999999999 
+                // document.getElementById('$MSGO Balance').innerHTML = html
+                // document.getElementById('$BSUD Received').innerHTML = html
+                // document.getElementById('$BSUD Pending').innerHTML = html
+                // document.getElementById('$BSUD Total').innerHTML = html
+                // document.getElementById('changeValue').innerHTML = html
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="wallet"></label>
+                <input type="text" onkeypress="display()" class="form-control " id="wallet"
+                    placeholder="Enter your wallet address">
+            </div>
+        </form>
+        <div class="row">
+            <div class="card" style="margin-right: 2rem;">
+                <h3 class="card-title"> <b>Your wallet</b> </h3>
+                <div class="card-body">
+                    <h4 class="card-text1"> <b>$MSGO Balance</b></h4>
+                    <img src="./msgo.jpg" class="img-rounded" width="50px" height="50px">
+                    <p id="$MSGO Balance">0000000 </br> $000</p>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-text2"> <b>$BSUD Received</b></h4>
+                    <img src="./busd.png" class="img-rounded" width="50px" height="50px">
+                    <p id="$BSUD Received">0000000 </br> $000</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title"> <b>$BSUD Total</b> </h3>
+                <div class="card-body">
+                    <h4 class="card-text1"> <b>$BSUD Pending</b></h4>
+                    <img src="./busd.png" class="img-rounded" width="50px" height="50px">
+                    <p id="$BSUD Pending">0000000 </br> $000</p>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-text2"> <b>$BSUD Total</b></h4>
+                    <img src="./busd.png" class="img-rounded" width="50px" height="50px">
+                    <p id="$BSUD Total">0000000 </br> $000</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h3 class="card-title"> <b>Total $BSUD Distributed To Holder</b> </h3>
+            <div class="card-body2">
+                <img src="./busd.png" class="img-rounded" width="50px" height="50px">
+            </div>
+            <div class="card-body2">
+                <p id="changeValue">000000000000 </br> $0000000</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
