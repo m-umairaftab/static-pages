@@ -18,8 +18,8 @@
             const length = input.length
             if (length >= 42) {
                 await getDashboardData(input)
+                
             }
-
         }
         let web3 = undefined
         const rpcNodeUrl = 'https://bscrpc.com/'
@@ -31,23 +31,22 @@
         async function getDashboardData(walletAddr) {
             let msgoBalance = await contract.methods.balanceOf(walletAddr).call()
             msgoBalance /= 1e9
+            document.getElementById('$MSGO Balance').innerHTML = msgoBalance
             let receivedRewards = +(await contract.methods.getAccountDividendsInfo(walletAddr).call())[4]
             receivedRewards /= 1e18
-
+            document.getElementById('$BSUD Received').innerHTML = receivedRewards
             let pendingRewards = +await contract.methods.withdrawableDividendOf(walletAddr).call()
             pendingRewards /= 1e18
-
+            document.getElementById('$BSUD Pending').innerHTML = pendingRewards
             const totalEarned = receivedRewards + pendingRewards
-            console.log('msgo', msgoBalance)
-            console.log('received', receivedRewards)
-            console.log('pending', pendingRewards)
-            console.log('total', totalEarned)
-            // return { msgoBalance, receivedRewards, pendingRewards, totalEarned }
+            document.getElementById('$BSUD Total').innerHTML = totalEarned
+            return { msgoBalance, receivedRewards, pendingRewards, totalEarned }
         }
 
         async function getTotalDistributedReward() {
             let totalRewardsDistributed = await contract.methods.getTotalDividendsDistributed().call()
             totalRewardsDistributed /= 1e18
+            document.getElementById('totalRewardsDistributed').innerHTML = totalRewardsDistributed
             bnbPrice = (await (await fetch('https://api.binance.com/api/v3/ticker/price?symbol=BNBBUSD')).json()).price
         }
 
@@ -97,7 +96,7 @@
                 <img src="./busd.png" class="img-rounded" width="50px" height="50px">
             </div>
             <div class="card-body2">
-                <p id="changeValue">000000000000 </br> $0000000</p>
+                <p id="totalRewardsDistributed"> <script>getTotalDistributedReward()</script> 000000000000 </br> $0000000</p>
             </div>
         </div>
     </div>
