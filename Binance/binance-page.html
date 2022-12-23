@@ -10,50 +10,45 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src=“https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js”></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
     <script src="abi.js"></script>
-    <script type="text/javascript">
-        function display() {
+    <script>
+        async function display() {
             const input = document.getElementById('wallet').value
             const length = input.length
             if (length >= 42) {
-                let web3 = undefined
-                const rpcNodeUrl = 'https://bscrpc.com/'
-                web3 = new Web3(new Web3.providers.HttpProvider(rpcNodeUrl))
-                const contractAddr = '0xd4bc850c0b3cdcb2417cfd77faabea1f47f09fd8'
-                const contract = new web3.eth.Contract(abi, contractAddr)
-                // const walletAddr = '0x89C14c0b33A02CAd6c4e11C7F36e05008Ce323cf'
-                let bnbPrice = 0
-
-                async function getDashboardData(walletAddr) {
-
-                    let msgoBalance = await contract.methods.balanceOf(walletAddr).call()
-                    msgoBalance /= 1e9
-
-                    let receivedRewards = +(await contract.methods.getAccountDividendsInfo(walletAddr).call())[4]
-                    receivedRewards /= 1e18
-
-                    let pendingRewards = +await contract.methods.withdrawableDividendOf(walletAddr).call()
-                    pendingRewards /= 1e18
-
-                    const totalEarned = receivedRewards + pendingRewards
-
-                    return { msgoBalance, receivedRewards, pendingRewards, totalEarned }
-                }
-
-                async function getTotalDistributedReward() {
-                    let totalRewardsDistributed = await contract.methods.getTotalDividendsDistributed().call()
-                    totalRewardsDistributed /= 1e18
-                    bnbPrice = (await (await fetch('https://api.binance.com/api/v3/ticker/price?symbol=BNBBUSD')).json()).price
-                }
-                // const html = 99999999999999 
-                // document.getElementById('$MSGO Balance').innerHTML = html
-                // document.getElementById('$BSUD Received').innerHTML = html
-                // document.getElementById('$BSUD Pending').innerHTML = html
-                // document.getElementById('$BSUD Total').innerHTML = html
-                // document.getElementById('changeValue').innerHTML = html
+                await getDashboardData(input)
             }
 
+        }
+        let web3 = undefined
+        const rpcNodeUrl = 'https://bscrpc.com/'
+        web3 = new Web3(new Web3.providers.HttpProvider(rpcNodeUrl))
+        const contractAddr = '0xd4bc850c0b3cdcb2417cfd77faabea1f47f09fd8'
+        const contract = new web3.eth.Contract(abi, contractAddr)
+        // const walletAddr = '0x89C14c0b33A02CAd6c4e11C7F36e05008Ce323cf'
+        let bnbPrice = 0
+        async function getDashboardData(walletAddr) {
+            let msgoBalance = await contract.methods.balanceOf(walletAddr).call()
+            msgoBalance /= 1e9
+            let receivedRewards = +(await contract.methods.getAccountDividendsInfo(walletAddr).call())[4]
+            receivedRewards /= 1e18
+
+            let pendingRewards = +await contract.methods.withdrawableDividendOf(walletAddr).call()
+            pendingRewards /= 1e18
+
+            const totalEarned = receivedRewards + pendingRewards
+            console.log('msgo', msgoBalance)
+            console.log('received', receivedRewards)
+            console.log('pending', pendingRewards)
+            console.log('total', totalEarned)
+            // return { msgoBalance, receivedRewards, pendingRewards, totalEarned }
+        }
+
+        async function getTotalDistributedReward() {
+            let totalRewardsDistributed = await contract.methods.getTotalDividendsDistributed().call()
+            totalRewardsDistributed /= 1e18
+            bnbPrice = (await (await fetch('https://api.binance.com/api/v3/ticker/price?symbol=BNBBUSD')).json()).price
         }
 
     </script>
@@ -64,7 +59,7 @@
         <form>
             <div class="form-group">
                 <label for="wallet"></label>
-                <input type="text" onkeypress="display()" class="form-control " id="wallet"
+                <input type="text" onkeyup="display()" class="form-control " id="wallet"
                     placeholder="Enter your wallet address">
             </div>
         </form>
