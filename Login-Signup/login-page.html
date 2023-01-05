@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login-page.css">
+    <title>Login/Signup</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank" ><img src="../Photos/Facebook.webp"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="../Photos/Instagram-logo.jpg"></a>
+                <a href="https://twitter.com/?lang=en" target="_blank"><img src="../Photos/Twiter.png"></a>
+            </div>
+            <form class="login-form" id="login">
+                <input type="text" class="form-field" placeholder="Username" required>
+                <input type="password" class="form-field" placeholder="Password" required>
+                <input type="checkbox" class="checkbox"><span>Remember Password</span>
+                <button type="submit" class="submit">Login</button>
+            </form>
+            <form class="login-form" id="register" >
+                <input type="text" class="form-field" placeholder="Username" required>
+                <input type="email" class="form-field" placeholder="Email Address" required>
+                <input type="password" class="form-field" placeholder="Password" required>
+                <input type="checkbox" class="checkbox"><span>I accept terms and condition</span>
+                <button type="submit" class="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        let log = document.getElementById("login")
+        let reg = document.getElementById("register")
+        let button = document.getElementById("btn")
+        function register () {
+            log.style.left = "-400px"
+            reg.style.left = "50px"
+            button.style.left = "110px"
+        }
+        function login () {
+            log.style.left = "50px"
+            reg.style.left = "450px"
+            button.style.left = "0px"
+        }
+    </script>
+</body>
+</html>
