@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asaan Dealing</title>
+    <link rel="stylesheet" href="./home-page.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid ">
+        <div class="sticky-top" style="backdrop-filter: blur(50px); background-color: rgba((255), 255, 255, 0.8);">
+            <div>
+                <nav class="navbar navbar-expand-lg navbar-light ">
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#asaan">
+                                    <h1 style="color: rgb(11, 105, 227);"><b>ASAAN</b> </h1> <span
+                                        class="sr-only">(current)</span>
+                                </a>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#dealing">
+                                    <h1><b>DEALING</b></h1> <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right flex-column">
+                            <a class="navbar-brand" href="#">
+                                <img id="logo" src="../Photos/bird.jpg" alt="Logo" style="width:50px;"
+                                    class="rounded-circle">
+                            </a>
+                            <button id="buy-sell" type="button" class="btn btn-default"> <img
+                                    src="../Photos/circle-plus-solid.svg" width="15px"
+                                    style="filter: invert(30%) sepia(80%) saturate(6230%) hue-rotate(240deg) brightness(100%) contrast(200%);">
+                                Buy/Sell</button>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light mt-4 ">
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul id="navbar-left" class="navbar-nav mr-auto">
+                            <li class="nav-item active ml-4 mr-4">
+                                <a class="nav-link" href="#home" style="color: rgb(11, 105, 227);">HOME <span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item ml-4 mr-4">
+                                <a id="promotion" class="nav-link" href="#promotion" style="color: black;">PROMOTION <span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item ml-4 mr-4">
+                                <a id="blog" class="nav-link" href="#blog" style="color: black;">BLOGS <span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item ml-4 mr-4">
+                                <a id="help" class="nav-link" href="#help" style="color: black;">HELP <span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item ml-4 mr-4">
+                                <a id="contact" class="nav-link" href="#contact" style="color: black;">CONTACT US <span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                        </ul>
+                        <ul id="navbar-right" class="nav navbar-nav navbar-right ">
+                            <li class="nav-item">Favorite<span class="glyphicon glyphicon-heart-empty"></span></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <hr>
+        </div>
+
+        <div class="container-fluid">
+            <div style="display: inline-block;">
+
+                <h1 style="color:rgb(11, 105, 227) ;"><b>ASAAN DEALING</b></h1>
+                <p>
+                    <b>BUY & SELL | PETS MARTKETPLACE | PAKISTAN</b>
+                    <br>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> Lorem Ipsum has
+                </p>
+                <form action="/action_page.php">
+                    <input class="form-control" list="browsers" name="browser" id="browser">
+                    <datalist id="browsers">
+                        <option value="ten">
+                        <option value="twenty">
+                        <option value="thirty">
+                    </datalist>
+                    <div class="form-group has-feedback has-feedback-left">
+                        <input id="search" type="text" class="form control" placeholder="Search product here">
+                        <button id="primary-button" type="button" class="btn btn-primary"> <img src="../Photos/magnifying-glass-solid.svg" width="20px"></button>
+                    </div>
+                </form>
+                <div id="card1">
+                    <div class="card" style="width: 28rem; display: inline-block;">
+                        <img class="card-img-top" src="../Photos/bird.jpg">
+                        <div class="card-body">
+                            <h3>Lizard</h3>
+                            <h6 style="color: rgb(11, 105, 227);">Love Birds</h6>
+                            <p class="card-text">Lizards are a widespread <br> group of squamate reptiles.
+                                <br><br><br><br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 28rem; display: inline-block;">
+                        <img class="card-img-top" src="../Photos/bird.jpg">
+                        <div class="card-body">
+                            <h3>Lizard</h3>
+                            <h6 style="color: rgb(11, 105, 227);">Love Birds</h6>
+                            <p class="card-text">Lizards are a widespread <br> group of squamate
+                                reptiles.<br><br><br><br></p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 28rem; display: inline-block;">
+                        <img class="card-img-top" src="../Photos/bird.jpg">
+                        <div class="card-body">
+                            <h3>Lizard</h3>
+                            <h6 style="color: rgb(11, 105, 227);">Love Birds</h6>
+                            <p class="card-text">Lizards are a widespread <br> group of squamate
+                                reptiles.<br><br><br><br></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-start text-center mt-5 align-items-center">
+                    <button id="buy" type="button" class="btn btn-default" style="display: inline-block;">Buy</button>
+                    <div class="vr"></div>
+                    <button id="sell" type="button" class="btn btn-default" style="display: inline-block;">Sell</button>
+                </div>
+            </div>
+
+            <nav class="navbar navbar-expand-sm bg-light navbar-light">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#cat" data-bs-toggle="dropdown">Category</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">ten</a></li>
+                                    <li><a class="dropdown-item" href="#">twenty </a></li>
+                                    <li><a class="dropdown-item" href="#">thirty</a></li>
+                                </ul>
+                            <li class="nav-item ml-5 mr-5">
+                                <span>Love Bird</span>
+                            </li>
+                            <li class="nav-item ml-5 mr-5">
+                                <span>Love Bird</span>
+                            </li>
+                            <li class="nav-item ml-5 mr-5">
+                                <span>Love Bird</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="card2">
+                <div class="card" style="width: 45rem; display: inline-block; background-color: rgb(251, 251, 251)">
+                    <img class="card-img-top" src="../Photos/bird.jpg">
+                    <div class="card-body">
+                        <h3>Lizard</h3>
+                        <h6 style="color: rgb(11, 105, 227);">Love Birds</h6>
+                        <p class="card-text">Lizards are a widespread <br> group of squamate reptiles.
+                            <br><br><br><br><br>
+                        </p>
+                    </div>
+                </div>
+                <div class="card" style="width: 45rem; display: inline-block; background-color: rgb(251, 251, 251)">
+                    <img class="card-img-top" src="../Photos/bird.jpg">
+                    <div class="card-body">
+                        <h3>Lizard</h3>
+                        <h6 style="color: rgb(11, 105, 227);">Love Birds</h6>
+                        <p class="card-text">Lizards are a widespread <br> group of squamate
+                            reptiles.<br><br><br><br><br></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 45rem; display: inline-block; background-color: rgb(251, 251, 251)">
+                    <img class="card-img-top" src="../Photos/bird.jpg">
+                    <div class="card-body">
+                        <h3>Lizard</h3>
+                        <h6 style="color: rgb(11, 105, 227);">Love Birds</h6>
+                        <p class="card-text">Lizards are a widespread <br> group of squamate
+                            reptiles.<br><br><br><br><br></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 45rem; display: inline-block; background-color: rgb(251, 251, 251)">
+                    <img class="card-img-top" src="../Photos/bird.jpg">
+                    <div class="card-body">
+                        <h3>Lizard</h3>
+                        <h6 style="color: rgb(11, 105, 227);">Love Birds</h6>
+                        <p class="card-text">Lizards are a widespread <br> group of squamate
+                            reptiles.<br><br><br><br><br></p>
+                    </div>
+                </div>
+                <div class="card"
+                    style="width: 45rem; display: inline-block; background-color: rgb(251, 251, 251); margin-top: 10px;">
+                    <img class="card-img-top" src="../Photos/bird.jpg">
+                    <div class="card-body">
+                        <h3>Lizard</h3>
+                        <h6 style="color: rgb(11, 105, 227);">Love Birds</h6>
+                        <p class="card-text">Lizards are a widespread <br> group of squamate
+                            reptiles.<br><br><br><br><br></p>
+                    </div>
+                </div>
+                <div class="card"
+                    style="width: 45rem; display: inline-block; background-color: rgb(251, 251, 251); margin-top: 10px;">
+                    <img class="card-img-top" src="../Photos/bird.jpg">
+                    <div class="card-body">
+                        <h3>Lizard</h3>
+                        <h6 style="color: rgb(11, 105, 227);">Love Birds</h6>
+                        <p class="card-text">Lizards are a widespread <br> group of squamate
+                            reptiles.<br><br><br><br><br></p>
+                    </div>
+                </div>
+                <div class="card"
+                    style="width: 45rem; display: inline-block;background-color: rgb(251, 251, 251); margin-top: 10px;">
+                    <img class="card-img-top" src="../Photos/bird.jpg">
+                    <div class="card-body">
+                        <h3>Lizard</h3>
+                        <h6 style="color: rgb(11, 105, 227);">Love Birds</h6>
+                        <p class="card-text">Lizards are a widespread <br> group of squamate
+                            reptiles.<br><br><br><br><br></p>
+                    </div>
+                </div>
+                <div class="card"
+                    style="width: 45rem; display: inline-block;background-color: rgb(251, 251, 251); margin-top: 10px;">
+                    <img class="card-img-top" src="../Photos/bird.jpg">
+                    <div class="card-body">
+                        <h3>Lizard</h3>
+                        <h6 style="color: rgb(11, 105, 227);">Love Birds</h6>
+                        <p class="card-text">Lizards are a widespread <br> group of squamate
+                            reptiles.<br><br><br><br><br></p>
+                    </div>
+                </div>
+            </div>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="../Photos/parrot1.png" alt="parrot" style="width:100%;">
+                    </div>
+
+                    <div class="item">
+                        <img src="../Photos/parrot2.png" alt="parrot" style="width:100%;">
+                    </div>
+
+                    <div class="item">
+                        <img src="../Photos/parrot3.png" alt=" parrot" style="width:100%;">
+                    </div>
+                </div>
+
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <h1 style="color: rgb(11, 105, 227); margin-top: 5%;">Recomendations</h1>
+            <div id="card3">
+                <div class="card" style="width: 45rem; display: inline-block; background-color: rgb(251, 251, 251)">
+                    <img class="card-img-top" src="../Photos/bird.jpg">
+                    <div class="card-body">
+                        <h3>Lizard</h3>
+                        <h6 style="color: rgb(11, 105, 227);">Love Birds</h6>
+                        <p class="card-text">Lizards are a widespread <br> group of squamate
+                            reptiles.<br><br><br><br><br></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 45rem; display: inline-block; background-color: rgb(251, 251, 251)">
+                    <img class="card-img-top" src="../Photos/bird.jpg">
+                    <div class="card-body">
+                        <h3>Lizard</h3>
+                        <h6 style="color: rgb(11, 105, 227);">Love Birds</h6>
+                        <p class="card-text">Lizards are a widespread <br> group of squamate
+                            reptiles.<br><br><br><br><br></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 45rem; display: inline-block; background-color: rgb(251, 251, 251)">
+                    <img class="card-img-top" src="../Photos/bird.jpg">
+                    <div class="card-body">
+                        <h3>Lizard</h3>
+                        <h6 style="color: rgb(11, 105, 227);">Love Birds</h6>
+                        <p class="card-text">Lizards are a widespread <br> group of squamate
+                            reptiles.<br><br><br><br><br></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 45rem; display: inline-block; background-color: rgb(251, 251, 251)">
+                    <img class="card-img-top" src="../Photos/bird.jpg">
+                    <div class="card-body">
+                        <h3>Lizard</h3>
+                        <h6 style="color: rgb(11, 105, 227);">Love Birds</h6>
+                        <p class="card-text">Lizards are a widespread <br> group of squamate
+                            reptiles.<br><br><br><br><br></p>
+                    </div>
+                </div>
+                <div class="card"
+                    style="width: 45rem; display: inline-block; background-color: rgb(251, 251, 251); margin-top: 10px;">
+                    <img class="card-img-top" src="../Photos/bird.jpg">
+                    <div class="card-body">
+                        <h3>Lizard</h3>
+                        <h6 style="color: rgb(11, 105, 227);">Love Birds</h6>
+                        <p class="card-text">Lizards are a widespread <br> group of squamate
+                            reptiles.<br><br><br><br><br></p>
+                    </div>
+                </div>
+                <div class="card"
+                    style="width: 45rem; display: inline-block;background-color: rgb(251, 251, 251); margin-top: 10px;">
+                    <img class="card-img-top" src="../Photos/bird.jpg">
+                    <div class="card-body">
+                        <h3>Lizard</h3>
+                        <h6 style="color: rgb(11, 105, 227);">Love Birds</h6>
+                        <p class="card-text">Lizards are a widespread <br> group of squamate
+                            reptiles.<br><br><br><br><br></p>
+                    </div>
+                </div>
+                <div class="card"
+                    style="width: 45rem; display: inline-block;background-color: rgb(251, 251, 251); margin-top: 10px;">
+                    <img class="card-img-top" src="../Photos/bird.jpg">
+                    <div class="card-body">
+                        <h3>Lizard</h3>
+                        <h6 style="color: rgb(11, 105, 227);">Love Birds</h6>
+                        <p class="card-text">Lizards are a widespread <br> group of squamate
+                            reptiles.<br><br><br><br><br></p>
+                    </div>
+                </div>
+                <div class="card"
+                    style="width: 45rem; display: inline-block; background-color: rgb(251, 251, 251); margin-top: 10px;">
+                    <img class="card-img-top" src="../Photos/bird.jpg">
+                    <div class="card-body">
+                        <h3>Lizard</h3>
+                        <h6 style="color: rgb(11, 105, 227);">Love Birds</h6>
+                        <p class="card-text">Lizards are a widespread <br> group of squamate
+                            reptiles.<br><br><br><br><br></p>
+                    </div>
+                </div>
+            </div>
+            <button id="load-more" type="button" class="btn btn-default">LOAD MORE <img
+                    src="../Photos/arrow-down-long-solid.svg" width="15px"
+                    style="filter: invert(30%) sepia(80%) saturate(6230%) hue-rotate(240deg) brightness(100%) contrast(200%);"></button>
+            <div class="container-fluid">
+
+                <footer style="background-color: rgb(251, 251, 251);">
+                    <div class="container-fluid " id="footer">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 mb-4 pt-3">
+                                <h1 class="mb-3"
+                                    style="letter-spacing: 2px; color: rgb(11, 105, 227) ; display: inline-block;">
+                                    <b>ASAAN</b>
+                                </h1>
+                                <h1 class="mb-3" style="letter-spacing: 2px; color: black; display: inline-block;">
+                                    <b>DEALING</b>
+                                </h1>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting <br>
+                                    industry. Lorem Ipsum has been the industry's standard</p>
+                                <ul class="list-unstyled d-flex flex-row justify-content-center">
+                                    <li>
+                                        <a class="text-white px-2 " href="#!">
+                                            <img src="../Photos/facebook.svg" width="20px" class="rounded-circle"
+                                                style="filter: invert(30%) sepia(80%) saturate(6230%) hue-rotate(240deg) brightness(100%) contrast(200%);">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="text-white px-2 ml-2" href="#!">
+                                            <img src="../Photos/instagram.svg" width="20px" class="rounded-circle"
+                                                style="filter: invert(30%) sepia(80%) saturate(6230%) hue-rotate(240deg) brightness(100%) contrast(200%);">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="text-white ps-2 ml-3" href="#!">
+                                            <img src="../Photos/youtube.svg" width="20px" class="rounded-circle"
+                                                style="filter: invert(30%) sepia(80%) saturate(6230%) hue-rotate(240deg) brightness(100%) contrast(200%);">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="text-white ps-2 ml-3" href="#!">
+                                            <img src="../Photos/twitter.svg" width="20px" class="rounded-circle"
+                                                style="filter: invert(30%) sepia(80%) saturate(6230%) hue-rotate(240deg) brightness(100%) contrast(200%);">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4 pt-3 ">
+                                <h3 class="mb-3" style="letter-spacing: 2px; color: black; "> <b>POPULAR CATEGORY</b>
+                                </h3>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-1">
+                                        <a href="#!" style="color: black;">Bird Name</a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#!" style="color: black;">Bird Name</a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#!" style="color: black;">Bird Name</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" style="color: black;">Bird Name</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" style="color: black;">Bird Name</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4 pt-3">
+                                <h3 class="mb-3" style="letter-spacing: 2px; color: black;"><b>CONTACT & SITEMAP</b>
+                                </h3>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-1">
+                                        <a href="#!" style="color: black;">Contact us</a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#!" style="color: black;">Site Map</a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#!" style="color: black;">Bird Name</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4 pt-3">
+                                <h3 class="mb-3" style="letter-spacing: 2px; color: black;"><b>MY ACCOUNT</b></h3>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-1">
+                                        <a href="#!" style="color: black;">Login</a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#!" style="color: black;">Register</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center p-3" style="background-color: white;">
+                        <h4>© 2023 ASAAN DEALING. All Right Reserved. Powered by Tacticminds.</h4>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

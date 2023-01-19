@@ -1,0 +1,142 @@
+body {
+    text-align: center;
+}
+
+#logo {
+    margin-top: 10px;
+}
+
+#buy-sell {
+    margin-top: 20px;
+    margin-right: 10px;
+    border: 1px solid rgb(11, 105, 227);
+    color: rgb(11, 105, 227);
+}
+
+#buy-sell:hover {
+    background-color: rgb(251, 251, 251);
+    border: 1px solid blue;
+}
+
+#navbar-left {
+    margin-left: 10%;
+    font-size: 20px;
+    width: 85%;
+}
+
+#blog:hover {
+    color: rgb(11, 105, 227) !important;
+}
+
+#promotion:hover {
+    color: rgb(11, 105, 227) !important;
+}
+
+#help:hover {
+    color: rgb(11, 105, 227) !important;
+}
+
+#contact:hover {
+    color: rgb(11, 105, 227) !important;
+}
+
+#navbar-right {
+    margin-top: 0%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#navbar-right:hover {
+    color: rgb(11, 105, 227);
+}
+
+#browser {
+    margin-top: 12%;
+    width: 50%;
+    padding: 3%;
+    box-shadow: none;
+}
+
+#search {
+    margin-top: 4%;
+    width: 87%;
+    padding: 18px;
+    outline-color: rgb(11, 105, 227);
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    font-size: 20px;
+}
+
+#primary-button {
+    padding: 23px 40px;
+}
+
+#card1 {
+    margin-top: 13%;
+    cursor: pointer;
+}
+
+#buy {
+    /* margin-top: 15%; */
+    border: none;
+    color: rgb(11, 105, 227);
+    font-size: 30px;
+}
+
+#sell {
+    /* margin-top: 15%; */
+    border: none;
+    font-size: 30px;
+}
+
+#sell:hover {
+    color: rgb(11, 105, 227);
+    background-color: white;
+}
+
+#buy:hover {
+    background-color: white;
+}
+
+.vr {
+    display: inline-block;
+    border-left: 1px solid;
+    width: 5px;
+    height: 30px;
+    text-align: center;
+    justify-content: center;
+}
+
+#card2 {
+    margin-top: 7%;
+    cursor: pointer;
+}
+
+#myCarousel {
+    margin-top: 7%;
+}
+
+#card3 {
+    margin-top: 2%;
+    cursor: pointer;
+}
+
+#load-more {
+    padding: 25px 10%;
+    background-color: rgb(251, 251, 251);
+    border-radius: 15px;
+    margin: 30px 36%;
+    border: none;
+    outline: none;
+}
+
+#load-more:hover {
+    border: 1px solid;
+    outline-color: rgb(251, 251, 251);
+    border-radius: 15px;
+    background-color: white;
+}
+#footer{
+    margin: 60px 0px 0px;
+    padding: 76px 97px;
+}
