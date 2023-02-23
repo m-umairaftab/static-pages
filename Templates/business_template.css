@@ -495,3 +495,34 @@ img, svg {
     text-decoration: none;
     color: #47B2E4;
 }
+.cta {
+    background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("../Photos/cta-bg.jpg") fixed center center;
+    background-size: cover;
+    padding: 120px 0;
+}
+.cta h3 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}
+.cta p {
+    color: #fff;
+    font-size: 18px;
+}
+.cta .cta-btn {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 50px;
+    /* transition: 0.5s; */
+    margin: 60px 0px 20px 45px;
+    border: 2px solid #fff;
+    color: #fff;
+}
+.cta .cta-btn:hover {
+    text-decoration: none;
+    background-color: #47b2e4;
+}
