@@ -526,3 +526,97 @@ img, svg {
     text-decoration: none;
     background-color: #47b2e4;
 }
+.portfolio #portfolio-flters {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+    background: #47b2e4;
+    color: #fff;
+}
+.portfolio #portfolio-flters li {
+cursor: pointer;
+display: inline-block;
+margin: 10px 5px;
+font-size: 15px;
+font-weight: 500;
+line-height: 1;
+color: #444444;
+transition: all 0.3s;
+padding: 8px 20px;
+border-radius: 50px;
+font-family: "Poppins", sans-serif;
+}
+.portfolio .portfolio-item {
+    margin-bottom: 30px;
+}
+.portfolio .portfolio-item .portfolio-img {
+    overflow: hidden;
+}
+.portfolio .portfolio-item .portfolio-info {
+    opacity: 0;
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    z-index: 3;
+    right: 15px;
+    transition: all 0.3s;
+    background: rgba(55, 81, 126, 0.8);
+    padding: 10px 15px;
+}
+.portfolio .portfolio-item .portfolio-info h4 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0px;
+}
+.portfolio .portfolio-item .portfolio-info p {
+    color: #f9fcfe;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.team .member {
+    position: relative;
+    box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+    padding: 30px;
+    border-radius: 5px;
+    background: #fff;
+    transition: 0.5s;
+    height: 100%;
+}
+.team .member .pic {
+    overflow: hidden;
+    width: 180px;
+    border-radius: 50%;
+}
+.team .member .member-info {
+    padding-left: 30px;
+}
+.member-info h4{
+    color: #37517E;
+    font-size: 20px;
+    font-weight: bolder;
+    
+}
+.member-info span{
+    color: #343a40;
+}
+.member-info p{
+    margin-top: 10px;
+    color: #343a40;
+}
+.member-info i{
+    color: #37517E;
+    padding: 10px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+.member-info span::after{
+    white-space: pre;
+    content: "\a_______ ";
+    opacity: 0.3;
+    content-visibility: 0.5;
+    color: #444444;
+}
