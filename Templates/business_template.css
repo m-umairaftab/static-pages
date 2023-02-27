@@ -618,3 +618,118 @@ font-family: "Poppins", sans-serif;
     content: "\a_______ ";
     opacity: 0.3;
 }
+.section-title h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #47b2e4;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+.pricing .row {
+    padding-top: 40px;
+}
+.pricing .box {
+    padding: 60px 40px;
+    box-shadow: 0 3px 20px -2px rgb(20 45 100 / 10%);
+    background: #fff;
+    height: 100%;
+    border-top: 4px solid #fff;
+    border-radius: 5px;
+}
+.pricing h3 {
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #37517e;
+}
+.pricing h4 {
+    font-size: 48px;
+    color: #37517e;
+    font-weight: 400;
+    font-family: "Jost", sans-serif;
+    margin-bottom: 25px;
+}
+.pricing h4 sup {
+    font-size: 28px;
+}
+sup {
+    top: -0.5em;
+}
+sub, sup {
+    position: relative;
+    font-size: .75em;
+    line-height: 0;
+    vertical-align: baseline;
+}
+.pricing h4 span {
+    color: #47b2e4;
+    font-size: 18px;
+    display: block;
+}
+.pricing ul {
+    padding: 20px 0;
+    list-style: none;
+    color: #999;
+    text-align: left;
+    line-height: 20px;
+}
+ol, ul {
+    padding-left: 2rem;
+}
+.pricing ul li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+}
+.pricing ul i {
+    color: #28a745;
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+    top: 6px;
+}
+.pricing ul .na {
+    color: #ccc;
+}
+.pricing ul .na i {
+    color: #ccc;
+}
+.pricing ul .na span {
+    text-decoration: line-through;
+}
+.pricing .buy-btn {
+    display: inline-block;
+    padding: 12px 35px;
+    border-radius: 50px;
+    color: #47b2e4;
+    transition: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Jost", sans-serif;
+    transition: 0.3s;
+    border: 1px solid #47b2e4;
+}
+.pricing .buy-btn:hover {
+    text-decoration: none;
+    background-color: #47B2E4;
+    color: white;
+}
+.pricing .featured .buy-btn {
+    background: #47b2e4;
+    color: #fff;
+}
+.pricing .featured  {
+    border-top: 4px solid #47B2E4;
+}
