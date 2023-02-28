@@ -402,6 +402,9 @@ a:hover {
 .why-us .accordion-list a.collapsed:hover {
     color: #47b2e4;
 }
+.why-us .accordion-list a.collapse {
+    color: #47b2e4;
+}
 .why-us .accordion-list a.collapsed .icon-close {
     display: none;
 }
@@ -732,4 +735,169 @@ ol, ul {
 }
 .pricing .featured  {
     border-top: 4px solid #47B2E4;
+}
+.faq .accordion-list .li1 {
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.faq .accordion-list .li2 {
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.faq .accordion-list .li3 {
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.faq .accordion-list .li4 {
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.faq .accordion-list .li5 {
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.faq .accordion-list {
+    padding: 0 100px 60px 100px;
+}
+.faq .accordion-list ul {
+    padding: 0;
+    list-style: none;
+}
+.faq .accordion-list a {
+    display: block;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    padding-right: 30px;
+    outline: none;
+    cursor: pointer;
+}
+a:hover {
+    color: #47b2e4;
+    text-decoration: none;
+}
+.faq .accordion-list a.collapsed {
+    color: #343a40;
+}
+.faq .img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.faq .accordion-list span {
+    color: #47b2e4;
+    font-weight: 600;
+    font-size: 18px;
+    padding-right: 10px;
+    
+}
+.faq .accordion-list .icon-show {
+    display: none;
+}
+.faq .accordion-list a.collapsed .icon-show {
+    display: inline-block;
+}
+.faq .accordion-list i {
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.faq .accordion-list a.collapsed:hover {
+    color: #47b2e4;
+}
+.faq .accordion-list a.collapse {
+    color: #47b2e4;
+}
+.faq .accordion-list a.collapsed .icon-close {
+    display: none;
+}
+.collapse:not(.show) {
+    display: none;
+}
+.faq .accordion-list p {
+    margin-bottom: 0;
+    padding: 10px 0 0 0;
+}
+.contact .info {
+    border-top: 3px solid #47b2e4;
+    border-bottom: 3px solid #47b2e4;
+    padding: 30px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 0 24px 0 rgb(0 0 0 / 10%);
+}
+.contact .info i {
+    font-size: 20px;
+    color: #47b2e4;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #e7f5fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+.contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #37517e;
+}
+.contact .info p {
+    padding: 0 0 10px 60px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #6182ba;
+}
+.contact .php-email-form {
+    width: 100%;
+    border-top: 3px solid #47b2e4;
+    border-bottom: 3px solid #47b2e4;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
+}
+.contact .php-email-form .form-group {
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+}
+.contact .php-email-form label {
+    padding-bottom: 8px;
+    color: #343a40;
+    cursor: default;
+    display: inline-block;
+}
+
+.contact .php-email-form input {
+    height: 44px;
+}
+.contact .php-email-form input, .contact .php-email-form textarea {
+    box-shadow: none;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.text-center {
+    text-align: center!important;
+}
+.contact .php-email-form button[type=submit] {
+    background: #47b2e4;
+    border: 0;
+    padding: 12px 34px;
+    color: #fff;
+    border-radius: 50px;
 }
