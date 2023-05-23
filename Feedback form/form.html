@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedback form</title>
+    <link rel="stylesheet" href="./form.css">
+    <script src="./form.js"></script>
+</head>
+
+<body class="container">
+
+    <div class="form-box">
+        <div>
+            <form id="info">
+                <h1>Student feedback</h1>
+                <label><b>Instructor Name:</b></label>
+                <input type="text" class="form-field">
+                <br><br>
+                <label><b>Course Id:</b></label>
+                <input type="text" class="form-field">
+                <br><br>
+                <label><b>Course Name:</b></label>
+                <select name="Course" id="Course">
+                    <option value="graphics">Graphics</option>
+                    <option value="creative writing">Creative Writing</option>
+                    <option value="SEO">SEO</option>
+                    <option value="Web designing">Web Designing</option>
+                </select>
+                <br><br>
+                <label><b>Why you have selected the course?</b></label>
+                <textarea class="textArea" cols="70" rows="8"></textarea>
+                <br><br>
+                <label><b>Would you recommend this course to other students?</b></label>
+                <br><br>
+                <div id="radio">
+                    <input type="radio" class="radio" name="recommend" value="YES" id="yes">
+                    <label for="yes">Yes</label>
+                    <input type="radio" class="radio" name="recommend" value="NO" id="no">
+                    <label for="no">No </label>
+                </div>
+                <button type="submit" id="btn2" onclick="next(event)">Next</button>
+            </form>
+        </div>
+        <div>
+            <form id="feedback">
+                <h1>Student feedback</h1>
+                <label><b>Level of effort invested by instructor?</b></label>
+                <br><br>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" name="effort" id="poor">
+                        <label for="poor">Poor</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" name="effort" id="Unsatisfactory">
+                        <label for="Unsatisfactory">Unsatisfactory</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" name="effort" id="satisfactory">
+                        <label for="satisfactory">Satisfactory</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" name="effort" id="very satisfactory">
+                        <label for="very satisfactory">Very Satisfactory</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" name="effort" id="outstanding">
+                        <label for="outstanding">Outstanding</label>
+                    </li>
+                </ul>
+                <br><br>
+                <label><b>How would you rate the instructor communication level?</b></label>
+                <br><br>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" name="effort" id="Poor">
+                        <label for="Poor">Poor</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" name="effort" id="unsatisfactory">
+                        <label for="unsatisfactory">Unsatisfactory</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" name="effort" id="Satisfactory">
+                        <label for="Satisfactory">Satisfactory</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" name="effort" id="Very satisfactory">
+                        <label for="Very satisfactory">Very Satisfactory</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" name="effort" id="Outstanding">
+                        <label for="Outstanding">Outstanding</label>
+                    </li>
+                </ul>
+
+                <button type="submit" class="btn" onclick="nexts(event)">Next</button>
+                <button type="submit" class="btn" onclick="prev(event)">prev</button>
+
+            </form>
+        </div>
+        <div>
+            <form id="final">
+                <h1>Student feedback</h1>
+                <label><b>How would you rate the course content rating scale?</b></label>
+                <br><br>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" name="effort" id="POOR">
+                        <label for="POOR">Poor</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" name="effort" id="UNSATISFACTORY">
+                        <label for="UNSATISFACTORY">Unsatisfactory</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" name="effort" id="SATISFATORY">
+                        <label for="SATISFATORY">Satisfactory</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" name="effort" id="VERY SATISFACTORY">
+                        <label for="VERY SATISFACTORY">Very Satisfactory</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" name="effort" id="OUTSTANDING">
+                        <label for="OUTSTANDING">Outstanding</label>
+                    </li>
+                </ul>
+                <br><br>
+                <label><b>Give any suggestion:</b></label>
+                <textarea class="textArea" cols="70" rows="17"></textarea>
+                <button type="submit" class="btn" onclick="sub(event)">submit</button>
+                <button type="submit" class="btn" onclick="previous(event)">prev</button>
+
+            </form>
+        </div>
+        <div>
+            <form id="submit">
+                <br>
+                <h1>Your form</h1>
+                <h1>is submitted.</h1>
+                <h1>Thank You</h1>
+                <h1>for your</h1>
+                <h1>feedback.</h1>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

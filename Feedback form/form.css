@@ -1,0 +1,92 @@
+
+.container{
+    /* background-size: cover; */
+    background-image: url("./photos/demo_feedback_form_Thumbnail.png");
+}
+.form-box {
+    width: 580px;
+    height: 950px;
+    padding: 5px;
+    margin:  auto;
+    background-color: whitesmoke;
+    overflow: hidden;
+    border-radius: 10px ;
+    border: 1px solid gainsboro;
+}
+h1{
+    color: darkblue;
+    text-align: center;
+    margin-top: 80px;
+    font-size: 60px;
+}
+label{
+    font-size: larger;
+}
+.form-field{
+    width: 100%;
+    padding: 11px 20px;
+    margin: 30px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+}
+#btn2{
+    color: whitesmoke;
+    background-color: darkblue;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 15px 35px;
+    cursor: pointer;
+    font-size: larger;
+    float: right;
+    margin-top: 10px;
+}
+.btn{
+    color: whitesmoke;
+    background-color: darkblue;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 12px 35px;
+    cursor: pointer;
+    font-size: larger;
+    float: right;
+    margin-top: 18px;
+}
+.btn:hover{
+    background-color: white;
+    color: darkblue;
+}
+#Course{
+    width: 100%;
+    padding: 10px 20px;
+    margin: 32px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+}
+.textArea{
+    resize: none;
+    outline: none;
+    margin-top: 30px;
+}
+.radio{
+    margin-top: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+    margin-top: 20px;
+}
+li {
+    margin-top: 16px;
+}
+ul li label{
+    cursor: pointer;
+}
+#radio label{
+    cursor: pointer;
+}
