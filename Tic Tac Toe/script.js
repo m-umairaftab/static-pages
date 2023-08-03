@@ -31,11 +31,13 @@ const checkWin = () => {
             document.querySelector('.imgBox').getElementsByTagName('img')[0].style.width = '200px';
             document.querySelector('.line').style.width = '20vw';
             document.querySelector('.line').style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`;
+            gameOver.play();
         }
     })
 }
 
 // Game logic
+music.play();
 let boxes = document.getElementsByClassName('box');
 Array.from(boxes).forEach(element => {
     let boxtext = element.querySelector('.boxText');
