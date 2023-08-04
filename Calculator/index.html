@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utils.css">
+    <script src="https://kit.fontawesome.com/87fa768f0d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <h1 class="text-center">Welcome to calculate me!</h1>
+    <div class="container flex flex-col item-center mx-auto">
+        <div  class="time-container">
+            <p id="showTime" class="time"></p>
+            <p class="fa fa-wifi icon">
+            <span class="fa fa-signal icon"></span>
+            <span class="fa fa-battery icon"></span>
+        </p>
+        </div>
+        
+        <div class="row">
+            <input type="text" class="input" placeholder="0">
+        </div>
+        <div class="row">
+            <button class="button bg-grey">AC</button>
+            <button class="button bg-grey">x</button>
+            <button class="button bg-grey">%</button>
+            <button class="button bg-orange">/</button>
+        </div>
+        <div class="row">
+            <button class="button bg-black">7</button>
+            <button class="button bg-black">8</button>
+            <button class="button bg-black">9</button>
+            <button class="button bg-orange">*</button>
+        </div>
+        <div class="row">
+            <button class="button bg-black">4</button>
+            <button class="button bg-black">5</button>
+            <button class="button bg-black">6</button>
+            <button class="button bg-orange">-</button>
+        </div>
+        <div class="row">
+            <button class="button bg-black">1</button>
+            <button class="button bg-black">2</button>
+            <button class="button bg-black">3</button>
+            <button class="button bg-orange">+</button>
+        </div>
+        <div class="row">
+            <button class="button bg-black">0</button>
+            <button class="button bg-black">00</button>
+            <button class="button bg-black">.</button>
+            <button class="button bg-orange">=</button>
+        </div>
+        <div class="line"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
