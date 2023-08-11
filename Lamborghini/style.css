@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    animation: shakeBody 6s linear infinite;
+}
+
+#sky {
+    height: 100vh;
+    width: 100%;
+    background: no-repeat;
+    background-image: url(./lamborghini/background.jpg);
+    position: absolute;
+}
+
+#trees {
+    height: 100vh;
+    width: 100%;
+    background-image: url(./lamborghini/trees.png);
+    background-size: cover;
+    position: absolute;
+    top: -260px;
+}
+
+#track {
+    height: 30vh;
+    width: 800vw;
+    background-image: url(./lamborghini/track.png);
+    position: absolute;
+    top: 70vh;
+    background-repeat: repeat-x;
+    animation: carMove 13s linear infinite;
+}
+
+#car {
+    height: 90px;
+    width: 280px;
+    background-image: url(./lamborghini/car_body.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 444px;
+    bottom: 29vh;
+    animation: shakeHorizantal 1s linear infinite;
+}
+
+.wheel1 img {
+    width: 60px;
+    position: relative;
+    top: 34px;
+    left: 38px;
+    animation: wheelRotation .16s linear infinite;
+}
+
+.wheel2 img {
+    width: 60px;
+    position: relative;
+    top: -30px;
+    left: 197px;
+    animation: wheelRotation .16s linear infinite;
+}
+
+@keyframes wheelRotation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes carMove {
+    100% {
+        transform: translateX(-500vw);
+    }
+}
+
+@keyframes shakeHorizantal {
+    0% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(-5px);
+    }
+}
+
+@keyframes shakeBody {
+    0% {
+        transform: translateY(-50px);
+    }
+
+    50% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(-50px);
+    }
+}
