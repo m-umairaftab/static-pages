@@ -9,25 +9,36 @@ const options = {
 
 const getWeather = (city) => {
 
+    let loader = document.getElementById('loader');
+    let loader2 = document.getElementById('loader2');
+    let loader3 = document.getElementById('loader3');
+    
 
-    cityName.innerHTML = city
     fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=' + city, options)
         .then(response => response.json())
         .then(response => {
+            if (!response.temp) {
+                cityName.innerHTML = city + ' is invalid. Please enter correct city.';
 
+            } else {
+                cityName.innerHTML = city;
+                loader.style.display = 'none';
+                loader2.style.display = 'none';
+                loader3.style.display = 'none';
+            }
             console.log("response: ", response)
-            temp.innerHTML = response.temp
-            temp2.innerHTML = response.temp
-            feels_like.innerHTML = response.feels_like
-            humidity.innerHTML = response.humidity
-            humidity2.innerHTML = response.humidity
-            min_temp.innerHTML = response.min_temp
-            max_temp.innerHTML = response.max_temp
-            wind_speed.innerHTML = response.wind_speed
-            wind_speed2.innerHTML = response.wind_speed
-            wind_degrees.innerHTML = response.wind_degrees
-            sunrise.innerHTML = response.sunrise
-            sunset.innerHTML = response.sunset
+            temp.innerHTML = response.temp || " "
+            temp2.innerHTML = response.temp || " "
+            feels_like.innerHTML = response.feels_like || " "
+            humidity.innerHTML = response.humidity || " "
+            humidity2.innerHTML = response.humidity || " "
+            min_temp.innerHTML = response.min_temp || " "
+            max_temp.innerHTML = response.max_temp || " "
+            wind_speed.innerHTML = response.wind_speed || " "
+            wind_speed2.innerHTML = response.wind_speed || " "
+            wind_degrees.innerHTML = response.wind_degrees || " "
+            sunrise.innerHTML = response.sunrise || " "
+            sunset.innerHTML = response.sunset || " "
         })
         .catch(err => console.error(err))
 }
@@ -35,6 +46,7 @@ const getWeather = (city) => {
 submit.addEventListener('click', (e) => {
     e.preventDefault()
     getWeather(city.value);
+
 });
 
 getWeather('Lahore')

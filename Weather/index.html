@@ -63,9 +63,17 @@
                 <h4 class="my-0 fw-normal">Temperature</h4>
               </div>
               <div class="card-body">
-                <h1 class="card-title pricing-card-title"><span
-                    id="temp"></span><small
-                    class="text-muted fw-light"><span>&#8451</span></small></h1>
+                <h1 class="card-title pricing-card-title">
+                  <span
+                    id="temp">
+                  </span>
+                  <span id="loader" id="load" class="spinner-border" role="status"
+                    aria-hidden="true">
+                  </span>
+                  <small
+                    class="text-muted fw-light"><span>&#8451</span>
+                  </small>
+                </h1>
                 <ul class="list-unstyled mt-3 mb-4">
                   <li>Temperature is <b> <span id="temp2"></span><span>&#8451</span></b></li>
                   <li>Min Temperature is <b><span id="min_temp"></span><span>&#8451</span></b></li>
@@ -81,8 +89,10 @@
                 <h4 class="my-0 fw-normal">Humidity Info</h4>
               </div>
               <div class="card-body">
-                <h1 class="card-title pricing-card-title"><span id="humidity2"></span><small
-                    class="text-muted fw-light"> %</small></h1>
+                <h1 class="card-title pricing-card-title"><span id="humidity2"></span><span
+                    id="loader2" class="spinner-border" role="status"
+                    aria-hidden="true"></span><small
+                    class="text-muted fw-light">%</small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
                   <!-- <li>Cloud PCT is <span id="cloud_pct"></span></li> -->
                   <li>Humidity is <b><span id="humidity"></span><span>%</span></b></li>
@@ -99,7 +109,10 @@
                 <h4 class="my-0 fw-normal">Wind Info</h4>
               </div>
               <div class="card-body">
-                <h1 class="card-title pricing-card-title"><span id="wind_speed2"></span><small
+                <h1 class="card-title pricing-card-title"><span
+                    id="wind_speed2"></span><span
+                    id="loader3" class="spinner-border" role="status"
+                    aria-hidden="true"></span><small
                     class="text-muted fw-light"> km/hr</small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
                   <li>Wind Speed is <b><span id="wind_speed"></span><span>km/hr</span></b></li>
