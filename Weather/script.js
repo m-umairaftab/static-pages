@@ -7,24 +7,27 @@ const options = {
     }
 };
 
+let modal = document.getElementById('dialogBox');
+
+
 const getWeather = (city) => {
 
     let loader = document.getElementById('loader');
     let loader2 = document.getElementById('loader2');
     let loader3 = document.getElementById('loader3');
-    
 
     fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=' + city, options)
         .then(response => response.json())
         .then(response => {
-            if (!response.temp) {
-                cityName.innerHTML = city + ' is invalid. Please enter correct city.';
-
-            } else {
+            if (response.temp || " ") {
                 cityName.innerHTML = city;
                 loader.style.display = 'none';
                 loader2.style.display = 'none';
                 loader3.style.display = 'none';
+                modal.style.display = 'none';
+            }
+            if (!response.temp) {
+                cityName.innerHTML = city + ' is invalid. Please enter correct city.';
             }
             console.log("response: ", response)
             temp.innerHTML = response.temp || " "
@@ -46,7 +49,9 @@ const getWeather = (city) => {
 submit.addEventListener('click', (e) => {
     e.preventDefault()
     getWeather(city.value);
-
+    modal.style.display = 'block';
+    modal.style.marginTop = '40vh';
+    // modal.style.boxShadow = '10px 15px lightblue';
 });
 
 getWeather('Lahore')
