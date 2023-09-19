@@ -245,25 +245,8 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"></script>
     <script src="script.js"></script>
-    <script>
-      window.addEventListener('load', () => {
-        registerSW();
-      });
-   
-      // Register the Service Worker
-      async function registerSW() {
-        if ('serviceWorker' in navigator) {
-          try {
-            await navigator
-                  .serviceWorker
-                  .register('serviceworker.js');
-          }
-          catch (e) {
-            console.log('SW registration failed');
-          }
-        }
-      }
-   </script>
-   <script src="serviceworker.js"></script>
+    
+    <script src="serviceworker.js"></script>
+    <script src="register_service_worker.js"></script>
   </body>
 </html>
